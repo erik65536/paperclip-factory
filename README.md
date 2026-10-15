@@ -28,7 +28,7 @@ npm run build
 npm start
 ```
 
-`npm test` checks the actual embedded game engine using Node's built-in test runner. `npm run build` copies the self-contained game to `dist/index.html` for static hosting. The GitHub Pages workflow deploys this file when Pages is configured to use GitHub Actions.
+`npm test` checks the actual embedded game engine using Node's built-in test runner. `npm run build` copies the self-contained game to `dist/index.html` for static hosting. Every GitHub push runs validation. To deploy publicly on GitHub Pages, enable **Settings → Pages → GitHub Actions**, then manually run the workflow with **deploy** selected. This setup is optional; opening the HTML locally does not require hosting.
 
 The compact `window.Paperclip` surface exposes engine state and methods for regression testing. It does not activate cheats or unlock chapters in normal play. Numbers use IEEE-754 approximations at cosmic scales; they are illustrative, not a physical mass model. No network requests occur during gameplay.
 
